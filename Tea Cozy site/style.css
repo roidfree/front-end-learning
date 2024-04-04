@@ -1,8 +1,46 @@
 /* Universal styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica;
     font-size: 22px;
     color: seashell;
     background-color: black;
     opacity: 0.9;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    padding: 10px;
+    height: 69px;
+    width: 100%;
+    border-bottom: 1px solid seashell;
+    background-color: black;
+}
+
+header img {
+    display: flex;
+    height: 50px;
+    justify-content: flex-start;
+    border-color: brown;
+    border-style: solid;
+}
+
+nav {
+    border-color: red;
+    border-style: solid;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav h2 {
+    display: inline;
+    flex-direction: row;
+    width: 500px; 
+    height: 50px;
+    text-decoration: underline;
+    justify-content: flex-end;
+    align-content: center;
 }
