@@ -2,25 +2,25 @@ let humanScore = 0;
 let computerScore = 0;
 let currentRoundNumber = 1;
 
-// Write your code below:
-function generateTarget() { // Generates secret target number= 
-    return Math.floor(Math.random() * 9)
-};
+// Generates secret target number
+function generateTarget() {
+  return Math.floor(Math.random() * 10);
+}
 
 console.log(generateTarget());
 
-let target = generateTarget()
 function compareGuesses(humanGuess, computerGuess, target) {
-    (Maths.abs(humanGuess - target) < Maths.abs(computerGuess - target)) ? true : false 
-};
+  return Math.abs(humanGuess - target) <= Math.abs(computerGuess - target);
+}
 
 function updateScore(winner) {
-    compareGuesses(humanGuess, compareGuesses, generateTarget) ? (humanScore += 1) : (computerScore += 1)
-};
-
-advanceRound() {
-    currentRoundNumber += 1
+  if (winner === 'human') {
+    humanScore += 1;
+  } else if (winner === 'computer') {
+    computerScore += 1;
+  }
 }
- 
 
-compareGuesses()
+function advanceRound() {
+  currentRoundNumber += 1;
+}
